@@ -1,0 +1,25 @@
+package com.spotify.ObjectRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ProfilePage {
+WebDriver driver;
+public ProfilePage(WebDriver driver) {
+	PageFactory.initElements(driver, this);
+}
+
+@FindBy(xpath = "//p[@title='Anirudh Ravichander']")
+private WebElement anirudh;
+
+
+public WebDriver getDriver() {
+	return driver;
+}
+
+public WebElement getAnirudh() {
+	return anirudh;
+}
+}
